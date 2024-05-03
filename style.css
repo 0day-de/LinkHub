@@ -46,7 +46,7 @@ main{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    box-shadow: 0 0 7px #fff;
+    box-shadow: 0 0 7px chartreuse;
     margin: 20px 0;
     animation: logo 1.8s ease-in-out alternate infinite;
 }
