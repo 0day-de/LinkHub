@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,10 +8,11 @@
     outline: none;
     border: none;
 }
-body{
+
+body {
     background-color: hsl(0, 0%, 12%);
-    background-image: url(./img/bg.jpeg);
-    background-repeat: repeat-Y;
+    background-image: url(./img/devil.png);
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     backdrop-filter: blur(5px);
@@ -20,15 +21,15 @@ body{
     backdrop-filter: blur(5px);
 }
 
-main{
+main {
     display: grid;
     justify-content: center;
     margin-bottom: 80px;
 }
 
-.container{
+.container {
     height: auto;
-    width: 500px;
+    width: 400px;
     padding: 10px;
     border-radius: 13px;
     overflow: hidden;
@@ -39,62 +40,81 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(10px);
 }
 
-.logo{
+.logo {
     user-select: none;
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    box-shadow: 0 0 7px chartreuse;
     margin: 20px 0;
-    animation: logo 1.8s ease-in-out alternate infinite;
+    animation: logo 1.5s ease-in-out alternate infinite;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow: 0 0 10px rgba(128, 255, 0, 0.836),
+        0 0 20px red,
+        0 0 30px orangered;
 }
+
+.logo:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
 @keyframes logo {
-    from{
-        transform: scale(.9);
+    from {
+        transform: scale(.97);
     }
-    to{
+
+    to {
         transform: scale(1);
     }
 }
 
-h1{
+h1 {
     text-transform: uppercase;
     font-size: 1.5rem;
     margin: 10px 0;
+    text-shadow: 0 0 40px #fff;
     animation: title .9s ease;
 }
+
 @keyframes title {
-    from{
+    from {
         transform: translateX(-100%);
     }
 }
 
-h4{
+h4 {
     font: 1rem;
     color: rgb(192, 209, 34);
     animation: title2 .9s ease;
 }
+
 @keyframes title2 {
-    from{
+    from {
         transform: translateX(100%);
     }
 }
 
-#talent{
+#talent {
+    padding: 5px 15px;
     font-size: 1rem;
     margin: 20px 0;
     font-weight: bold;
     animation: para .9s ease;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #cacacadc;
 }
+
 @keyframes para {
-    from{
+    from {
         transform: translateY(100%);
     }
 }
 
-ul{
+ul {
     list-style-type: none;
     cursor: pointer;
     width: 100%;
@@ -102,49 +122,63 @@ ul{
     user-select: none;
 }
 
-ul a{
+ul a {
     text-decoration: none;
     color: #fff;
 }
 
-ul a li{
+ul a li {
     background-color: rgba(255, 255, 255, .1);
     border-radius: 20px;
     margin: 20px 0;
     padding: 10px;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
-ul a li:hover{
+
+ul a li:hover {
     background: #fff;
     color: #000;
+    letter-spacing: 2px;
     transition: .9s ease alternate;
 }
 
-ul a li i{
+ul a li i {
     margin-right: 20px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+#hr hr{
+    width: 100%;
+    height: 2px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: #8d7f7fb6;
+}
+
+#hr{
+    text-align: center;
+    padding-top: 40px;
+    color: #9c9999;
+    font-size: .9rem;
 }
 
 footer {
+    user-select: none;
     color: #fff;
     background: rgba(0, 0, 0, .8);
-    padding: 30px 0;
+    padding: 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: auto; /* Pushes the footer to the bottom */
+    margin-top: auto;
+    /* Pushes the footer to the bottom */
 }
 
 footer h2 {
     font-size: 1.2rem;
+    color: #bbb9b9d3;
+    padding: 5px;
+    border-right: 2px dashed #bbb9b9d3;
 }
 
 footer h2 i {
@@ -152,6 +186,7 @@ footer h2 i {
 }
 
 footer p {
+    color: #b3adadd0;
     margin: 0 10px;
     font-size: 0.9rem;
 }
@@ -163,22 +198,27 @@ footer p {
 
 @media screen and (max-width: 564px) {
     .container {
-        width: 100%;
+        width: 350px;
     }
+
     footer {
-        padding: 20px 0; /* Adjusted padding for smaller screens */
+        padding: 40px 0;
+        /* Adjusted padding for smaller screens */
     }
 }
 
 /* Media Query for even smaller screens */
 @media screen and (max-width: 480px) {
     .container {
-        width: 100%;
+        width: 330px;
     }
-    footer h2{
+
+    footer h2 {
         font-size: 1rem;
     }
+
     footer p {
-        font-size: 0.7rem; /* Adjusted font size for smaller screens */
+        font-size: 0.7rem;
+        /* Adjusted font size for smaller screens */
     }
 }
